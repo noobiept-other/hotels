@@ -25,17 +25,34 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSV-9n-bNE">
-                                            <rect key="frame" x="166" y="11" width="77" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRh-XT-oKg">
+                                            <rect key="frame" x="16" y="11" width="343" height="22"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSV-9n-bNE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="303.33333333333331" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQU-VX-12r">
+                                                    <rect key="frame" x="303.33333333333331" y="0.0" width="39.666666666666686" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IRh-XT-oKg" firstAttribute="top" secondItem="0Qw-AU-8nx" secondAttribute="topMargin" id="07f-bY-mlY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IRh-XT-oKg" secondAttribute="bottom" id="J8S-Sz-2FX"/>
+                                        <constraint firstItem="IRh-XT-oKg" firstAttribute="leading" secondItem="0Qw-AU-8nx" secondAttribute="leadingMargin" id="h7W-Zr-9iS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="IRh-XT-oKg" secondAttribute="trailing" id="jOf-P8-b7B"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="label" destination="xSV-9n-bNE" id="aid-0q-fZF"/>
+                                    <outlet property="name" destination="xSV-9n-bNE" id="aid-0q-fZF"/>
+                                    <outlet property="stars" destination="MQU-VX-12r" id="3Ed-v1-ahd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
