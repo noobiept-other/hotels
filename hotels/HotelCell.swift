@@ -4,7 +4,7 @@ class HotelCell: UITableViewCell {
 
     @IBOutlet var label: UILabel!
 
-    func update(_ info: String) {
-        self.label.text = info
+    func update(_ info: Hotel) {
+        self.label.text = info.name
     }
 }

@@ -2,7 +2,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var hotels: [String] = [ "test 1", "test 2", "test 3" ]
+    var hotels: [Hotel] = []
 
 
     override func viewDidLoad() {
@@ -20,9 +20,21 @@ class TableViewController: UITableViewController {
         let task = session.dataTask(with: request) {
             data, response, error in
 
+            guard let data = data else {
+                print("Request failed.")
+                return
+            }
+
             do {
-                let json = try JSONSerialization.jsonObject(with: data!)
-                print(json)
+                let decoder = JSONDecoder()
+                let decodedData = try decoder.decode(HotelData.self, from: data)
+
+                self.hotels = decodedData.hotels
+
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
             }
 
             catch {
