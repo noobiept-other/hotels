@@ -474,7 +474,19 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="address" destination="CCW-xS-O30" id="gvM-ql-che"/>
+                        <outlet property="checkInFrom" destination="uSg-pC-efr" id="BA1-bM-yl8"/>
+                        <outlet property="checkInTo" destination="ff0-I7-VYt" id="zUe-UF-1lL"/>
+                        <outlet property="checkOutFrom" destination="uju-eO-zrk" id="DWU-l7-jlK"/>
+                        <outlet property="checkOutTo" destination="5hF-36-DEf" id="0ue-Jb-C8T"/>
+                        <outlet property="city" destination="IBM-1A-ume" id="waC-Sf-VxJ"/>
+                        <outlet property="email" destination="skK-vT-4VH" id="DWQ-dA-j7V"/>
+                        <outlet property="latitude" destination="3aA-LG-NE8" id="7cd-hM-NoZ"/>
+                        <outlet property="longitude" destination="Xiu-Kk-lyo" id="vkd-NE-dma"/>
                         <outlet property="name" destination="XJD-2B-AJu" id="x0g-Nu-lx7"/>
+                        <outlet property="phoneNumber" destination="CQx-cp-oR6" id="DiG-Qd-GJ6"/>
+                        <outlet property="stars" destination="IpI-Rk-ODk" id="jbh-jQ-bms"/>
+                        <outlet property="userRating" destination="FTv-y7-OXu" id="s6z-bN-qcJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oj-i7-Mkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
