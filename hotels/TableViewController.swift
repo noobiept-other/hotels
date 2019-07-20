@@ -6,6 +6,7 @@ class TableViewController: UITableViewController {
 
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.getData()
     }
 
@@ -60,5 +61,19 @@ class TableViewController: UITableViewController {
         cell.update(info)
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let hotel = self.hotels[indexPath.row]
+        self.performSegue(withIdentifier: "HotelDetails", sender: hotel)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HotelDetails" {
+            if let hotelDetailsView = segue.destination as? HotelDetailsTableViewController,
+               let hotel = sender as? Hotel {
+                hotelDetailsView.hotel = hotel
+            }
+        }
     }
 }

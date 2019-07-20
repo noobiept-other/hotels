@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095D48A122E2154A00A265DF /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D48A022E2154A00A265DF /* Hotel.swift */; };
+		096DBD9A22E3439B00589EAB /* HotelDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096DBD9922E3439B00589EAB /* HotelDetailsTableViewController.swift */; };
 		0989C56B22E1DD6700D5B004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989C56A22E1DD6700D5B004 /* AppDelegate.swift */; };
 		0989C57022E1DD6700D5B004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0989C56E22E1DD6700D5B004 /* Main.storyboard */; };
 		0989C57222E1DD6700D5B004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0989C57122E1DD6700D5B004 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		095D48A022E2154A00A265DF /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		096DBD9922E3439B00589EAB /* HotelDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsTableViewController.swift; sourceTree = "<group>"; };
 		0989C56722E1DD6700D5B004 /* hotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0989C56A22E1DD6700D5B004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0989C56F22E1DD6700D5B004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				0989C56A22E1DD6700D5B004 /* AppDelegate.swift */,
 				0989C56E22E1DD6700D5B004 /* Main.storyboard */,
 				09BDC63022E1E0B90069CCF1 /* TableViewController.swift */,
+				096DBD9922E3439B00589EAB /* HotelDetailsTableViewController.swift */,
 				095D48A022E2154A00A265DF /* Hotel.swift */,
 				09BDC63222E1E31A0069CCF1 /* HotelCell.swift */,
 				0989C57122E1DD6700D5B004 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				09BDC63122E1E0B90069CCF1 /* TableViewController.swift in Sources */,
 				09BDC63322E1E31A0069CCF1 /* HotelCell.swift in Sources */,
 				095D48A122E2154A00A265DF /* Hotel.swift in Sources */,
+				096DBD9A22E3439B00589EAB /* HotelDetailsTableViewController.swift in Sources */,
 				0989C56B22E1DD6700D5B004 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
