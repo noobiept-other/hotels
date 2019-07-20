@@ -1,6 +1,6 @@
 import UIKit
 
-class TableViewController: UITableViewController {
+class MainController: UITableViewController {
 
     var hotels: [Hotel] = []
 
@@ -70,7 +70,7 @@ class TableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HotelDetails" {
-            if let hotelDetailsView = segue.destination as? HotelDetailsTableViewController,
+            if let hotelDetailsView = segue.destination as? HotelDetailsController,
                let hotel = sender as? Hotel {
                 hotelDetailsView.hotel = hotel
             }

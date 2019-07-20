@@ -1,6 +1,6 @@
 import UIKit
 
-class HotelDetailsTableViewController: UITableViewController {
+class HotelDetailsController: UITableViewController {
 
     var hotel: Hotel?
     @IBOutlet var name: UILabel!
