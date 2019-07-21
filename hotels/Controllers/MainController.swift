@@ -6,7 +6,18 @@ class MainController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // add a loading indicator
+        let activityView = UIActivityIndicatorView(style: .gray)
+        activityView.center = self.view.center
+        activityView.startAnimating()
+
+        self.view.addSubview(activityView)
+
         self.getData()
+
+        activityView.stopAnimating()
+        activityView.removeFromSuperview()
     }
 
     func getData() {
