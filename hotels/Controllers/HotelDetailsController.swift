@@ -17,7 +17,7 @@ class HotelDetailsController: UITableViewController {
     @IBOutlet var checkOutTo: UILabel!
     @IBOutlet var phoneNumber: UILabel!
     @IBOutlet var email: UILabel!
-
+    @IBOutlet var hotelImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,5 +39,34 @@ class HotelDetailsController: UITableViewController {
         self.checkOutFrom.text = hotel.checkOut.from
         self.phoneNumber.text = hotel.contact.phoneNumber
         self.email.text = hotel.contact.email
+
+        if hotel.images.count > 0 {
+            self.loadHotelImage(hotel.images[0])
+        }
+    }
+
+    func loadHotelImage(_ urlStr: String) {
+        guard let url = URL(string: urlStr) else {
+            return
+        }
+
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) {
+            data, response, error in
+
+            guard let data = data,
+                  let response = response as? HTTPURLResponse,
+                  response.statusCode == 200,
+                  error == nil
+                else {
+                print("Error while loading the hotel image.")
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.hotelImage.image = UIImage(data: data)
+            }
+        }
+        task.resume()
     }
 }

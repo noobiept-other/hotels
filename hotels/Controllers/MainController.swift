@@ -4,12 +4,10 @@ class MainController: UITableViewController {
 
     var hotels: [Hotel] = []
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getData()
     }
-
 
     func getData() {
         let url = URL(string: "https://services.lastminute.com/mobile/stubs/hotels")!
@@ -44,7 +42,6 @@ class MainController: UITableViewController {
         }
         task.resume()
     }
-
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
